@@ -1,0 +1,91 @@
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    font-size: 16px;
+}
+
+footer {
+    text-align: right;
+
+}
+
+.btn-signup {
+    background: rgb(198, 12, 12);
+    color: white;
+    font-weight: 300;
+    padding: 15px 15px;
+    border-radius: 2px;
+}
+
+.btn-signup:hover {
+    color: #eee;
+}
+
+.hero-unit {
+    padding: 75px 30px 10px;
+    color: rgb(0, 0, 0);
+    height: 225px;
+    background: rgba(255, 255, 255, 0);
+}
+
+.hero-unit h1 {
+    font-size: 2.75em;
+    line-height: 1.5;
+    /*text-decoration: underline;*/
+}
+
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 70px;
+    border-top: 1px solid #e5e5e5;
+    background-color: #f5f5f5;
+}
+
+.main-body {
+    padding-top: 0;
+    background: url(../img/map-bg.png) no-repeat;
+    background-position: 0 50px;
+}
+
+.navbar-brand-label {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 26px;
+}
+
+.press-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.press-links li {
+    display: inline-block;
+    margin: 30px;
+}
+
+.shuffle {
+    min-width: 75px;
+    display: inline-block;
+}
+
+.sub-img {
+    height: 200px;
+}
+
+.testimationals img {
+    float: left;
+    width: 68px;
+    margin: 0 10px 100px;
+}
+
+@media (max-width: 979px) {
+    .hero-unit {
+        padding-top: 0;
+    }
+
+    .hero-unit h1 {
+        font-size: 1.75em;
+    }
+}
