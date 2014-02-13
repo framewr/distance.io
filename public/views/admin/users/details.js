@@ -32,30 +32,8 @@
       errfor: {},
       isActive: '',
       username: '',
-      email: ''
-    },
-    url: function() {
-      return '/admin/users/'+ app.mainView.model.id +'/';
-    },
-    parse: function(response) {
-      if (response.user) {
-        app.mainView.model.set(response.user);
-        delete response.user;
-      }
-
-      return response;
-    }
-  });
-
-  app.Roles = Backbone.Model.extend({
-    idAttribute: '_id',
-    defaults: {
-      success: false,
-      errors: [],
-      errfor: {},
-      roles: {},
-      newAccountId: '',
-      newAdminId: ''
+      email: '',
+      account: ''
     },
     url: function() {
       return '/admin/users/'+ app.mainView.model.id +'/';
@@ -156,7 +134,7 @@
       'click .btn-account-unlink': 'accountUnlink'
     },
     initialize: function() {
-      this.model = new app.Roles();
+      this.model = new app.Identity();
       this.syncUp();
       this.listenTo(app.mainView.model, 'change', this.syncUp);
       this.listenTo(this.model, 'sync', this.render);
@@ -165,7 +143,7 @@
     syncUp: function() {
       this.model.set({
         _id: app.mainView.model.id,
-        roles: app.mainView.model.get('roles')
+        account: app.mainView.model.get('account')
       });
     },
     render: function() {
@@ -177,33 +155,8 @@
         }
       }
     },
-    adminOpen: function() {
-      location.href = '/admin/administrators/'+ this.model.get('roles').admin._id +'/';
-    },
-    adminLink: function() {
-      this.model.save({
-        newAdminId: $('[name="newAdminId"]').val()
-      },{
-        url: this.model.url() +'role-admin/'
-      });
-    },
-    adminUnlink: function() {
-      if (confirm('Are you sure?')) {
-        this.model.destroy({
-          url: this.model.url() +'role-admin/',
-          success: function(model, response) {
-            if (response.user) {
-              app.mainView.model.set(response.user);
-              delete response.user;
-            }
-
-            app.rolesView.model.set(response);
-          }
-        });
-      }
-    },
     accountOpen: function() {
-      location.href = '/admin/accounts/'+ this.model.get('roles').account._id +'/';
+      location.href = '/admin/accounts/'+ this.model.get('account')._id +'/';
     },
     accountLink: function() {
       this.model.save({

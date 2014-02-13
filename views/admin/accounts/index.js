@@ -3,17 +3,6 @@
 exports.find = function(req, res, next){
   var outcome = {};
 
-  var getStatusOptions = function(callback) {
-    req.app.db.models.Status.find({ pivot: 'Account' }, 'name').sort('name').exec(function(err, statuses) {
-      if (err) {
-        return callback(err, null);
-      }
-
-      outcome.statuses = statuses;
-      return callback(null, 'done');
-    });
-  };
-
   var getResults = function(callback) {
     req.query.search = req.query.search ? req.query.search : '';
     req.query.status = req.query.status ? req.query.status : '';
@@ -58,6 +47,7 @@ exports.find = function(req, res, next){
     }
     else {
       outcome.results.filters = req.query;
+      req.app.set('view engine', 'jade');
       res.render('admin/accounts/index', {
         data: {
           results: escape(JSON.stringify(outcome.results)),
@@ -67,22 +57,11 @@ exports.find = function(req, res, next){
     }
   };
 
-  require('async').parallel([getStatusOptions, getResults], asyncFinally);
+  require('async').parallel([getResults], asyncFinally);
 };
 
 exports.read = function(req, res, next){
   var outcome = {};
-
-  var getStatusOptions = function(callback) {
-    req.app.db.models.Status.find({ pivot: 'Account' }, 'name').sort('name').exec(function(err, statuses) {
-      if (err) {
-        return callback(err, null);
-      }
-
-      outcome.statuses = statuses;
-      return callback(null, 'done');
-    });
-  };
 
   var getRecord = function(callback) {
     req.app.db.models.Account.findById(req.params.id).exec(function(err, record) {
@@ -104,6 +83,7 @@ exports.read = function(req, res, next){
       res.send(outcome.record);
     }
     else {
+      req.app.set('view engine', 'jade');
       res.render('admin/accounts/details', {
         data: {
           record: escape(JSON.stringify(outcome.record)),
@@ -113,7 +93,7 @@ exports.read = function(req, res, next){
     }
   };
 
-  require('async').parallel([getStatusOptions, getRecord], asyncFinally);
+  require('async').parallel([ getRecord], asyncFinally);
 };
 
 exports.create = function(req, res, next){

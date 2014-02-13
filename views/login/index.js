@@ -5,6 +5,7 @@ exports.init = function(req, res){
     res.redirect(req.user.defaultReturnUrl());
   }
   else {
+    req.app.set('view engine', 'jade');
     res.render('login/index', {
       returnUrl: req.query.returnUrl || '/',
       oauthMessage: '',

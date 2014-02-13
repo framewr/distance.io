@@ -104,13 +104,6 @@ block body
         button.close(type='button', data-dismiss='alert') &times;
         |<%= err %>
       |<% }); %>
-    div.input-group
-      select.form-control(name='status')
-        option(value='') -- choose --
-        for status in data.statuses
-          option(value='#{status._id}') #{status.name}
-      div.input-group-btn
-        button.btn.btn-default.btn-add Change
 
   script(type='text/template', id='tmpl-status-collection')
     div#status-items.status-items

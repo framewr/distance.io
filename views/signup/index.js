@@ -5,6 +5,7 @@ exports.init = function(req, res){
     res.redirect(req.user.defaultReturnUrl());
   }
   else {
+    req.app.set('view engine', 'jade');
     res.render('signup/index', {
       oauthMessage: '',
       oauthTwitter: !!req.app.get('twitter-oauth-key'),

@@ -41,13 +41,14 @@ exports.find = function(req, res, next){
     }
     else {
       results.filters = req.query;
+      req.app.set('view engine', 'jade');
       res.render('admin/users/index', { data: { results: JSON.stringify(results) } });
     }
   });
 };
 
 exports.read = function(req, res, next){
-  req.app.db.models.User.findById(req.params.id).populate('roles.admin', 'name.full').populate('roles.account', 'name.full').exec(function(err, user) {
+  req.app.db.models.User.findById(req.params.id).populate('account', 'name.full').exec(function(err, user) {
     if (err) {
       return next(err);
     }
@@ -56,6 +57,7 @@ exports.read = function(req, res, next){
       res.send(user);
     }
     else {
+      req.app.set('view engine', 'jade');
       res.render('admin/users/details', { data: { record: escape(JSON.stringify(user)) } });
     }
   });
@@ -297,178 +299,10 @@ exports.password = function(req, res, next){
   workflow.emit('validate');
 };
 
-exports.linkAdmin = function(req, res, next){
-  var workflow = req.app.utility.workflow(req, res);
-
-  workflow.on('validate', function() {
-    if (!req.user.roles.admin.isMemberOf('root')) {
-      workflow.outcome.errors.push('You may not link users to admins.');
-      return workflow.emit('response');
-    }
-
-    if (!req.body.newAdminId) {
-      workflow.outcome.errfor.newAdminId = 'required';
-      return workflow.emit('response');
-    }
-
-    workflow.emit('verifyAdmin');
-  });
-
-  workflow.on('verifyAdmin', function(callback) {
-    req.app.db.models.Admin.findById(req.body.newAdminId).exec(function(err, admin) {
-      if (err) {
-        return workflow.emit('exception', err);
-      }
-
-      if (!admin) {
-        workflow.outcome.errors.push('Admin not found.');
-        return workflow.emit('response');
-      }
-
-      if (admin.user.id && admin.user.id !== req.params.id) {
-        workflow.outcome.errors.push('Admin is already linked to a different user.');
-        return workflow.emit('response');
-      }
-
-      workflow.admin = admin;
-      workflow.emit('duplicateLinkCheck');
-    });
-  });
-
-  workflow.on('duplicateLinkCheck', function(callback) {
-    req.app.db.models.User.findOne({ 'roles.admin': req.body.newAdminId, _id: {$ne: req.params.id} }).exec(function(err, user) {
-      if (err) {
-        return workflow.emit('exception', err);
-      }
-
-      if (user) {
-        workflow.outcome.errors.push('Another user is already linked to that admin.');
-        return workflow.emit('response');
-      }
-
-      workflow.emit('patchUser');
-    });
-  });
-
-  workflow.on('patchUser', function(callback) {
-    req.app.db.models.User.findById(req.params.id).exec(function(err, user) {
-      if (err) {
-        return workflow.emit('exception', err);
-      }
-
-      user.roles.admin = req.body.newAdminId;
-      user.save(function(err, user) {
-        if (err) {
-          return workflow.emit('exception', err);
-        }
-
-        user.populate('roles.admin roles.account', 'name.full', function(err, user) {
-          if (err) {
-            return workflow.emit('exception', err);
-          }
-
-          workflow.outcome.user = user;
-          workflow.emit('patchAdmin');
-        });
-      });
-    });
-  });
-
-  workflow.on('patchAdmin', function() {
-    workflow.admin.user = { id: req.params.id, name: workflow.outcome.user.username };
-    workflow.admin.save(function(err, admin) {
-      if (err) {
-        return workflow.emit('exception', err);
-      }
-
-      workflow.emit('response');
-    });
-  });
-
-  workflow.emit('validate');
-};
-
-exports.unlinkAdmin = function(req, res, next){
-  var workflow = req.app.utility.workflow(req, res);
-
-  workflow.on('validate', function() {
-    if (!req.user.roles.admin.isMemberOf('root')) {
-      workflow.outcome.errors.push('You may not unlink users from admins.');
-      return workflow.emit('response');
-    }
-
-    if (req.user._id === req.params.id) {
-      workflow.outcome.errors.push('You may not unlink yourself from admin.');
-      return workflow.emit('response');
-    }
-
-    workflow.emit('patchUser');
-  });
-
-  workflow.on('patchUser', function() {
-    req.app.db.models.User.findById(req.params.id).exec(function(err, user) {
-      if (err) {
-        return workflow.emit('exception', err);
-      }
-
-      if (!user) {
-        workflow.outcome.errors.push('User was not found.');
-        return workflow.emit('response');
-      }
-
-      var adminId = user.roles.admin;
-      user.roles.admin = null;
-      user.save(function(err, user) {
-        if (err) {
-          return workflow.emit('exception', err);
-        }
-
-        user.populate('roles.admin roles.account', 'name.full', function(err, user) {
-          if (err) {
-            return workflow.emit('exception', err);
-          }
-
-          workflow.outcome.user = user;
-          workflow.emit('patchAdmin', adminId);
-        });
-      });
-    });
-  });
-
-  workflow.on('patchAdmin', function(id) {
-    req.app.db.models.Admin.findById(id).exec(function(err, admin) {
-      if (err) {
-        return workflow.emit('exception', err);
-      }
-
-      if (!admin) {
-        workflow.outcome.errors.push('Admin was not found.');
-        return workflow.emit('response');
-      }
-
-      admin.user = undefined;
-      admin.save(function(err, admin) {
-        if (err) {
-          return workflow.emit('exception', err);
-        }
-
-        workflow.emit('response');
-      });
-    });
-  });
-
-  workflow.emit('validate');
-};
-
 exports.linkAccount = function(req, res, next){
   var workflow = req.app.utility.workflow(req, res);
 
   workflow.on('validate', function() {
-    if (!req.user.roles.admin.isMemberOf('root')) {
-      workflow.outcome.errors.push('You may not link users to accounts.');
-      return workflow.emit('response');
-    }
-
     if (!req.body.newAccountId) {
       workflow.outcome.errfor.newAccountId = 'required';
       return workflow.emit('response');
@@ -488,7 +322,7 @@ exports.linkAccount = function(req, res, next){
         return workflow.emit('response');
       }
 
-      if (account.user.id && account.user.id !== req.params.id) {
+      if (account.user.id && String(account.user.id) !== String(req.params.id)) {
         workflow.outcome.errors.push('Account is already linked to a different user.');
         return workflow.emit('response');
       }
@@ -499,6 +333,7 @@ exports.linkAccount = function(req, res, next){
   });
 
   workflow.on('duplicateLinkCheck', function(callback) {
+    console.log('link checking');
     req.app.db.models.User.findOne({ 'roles.account': req.body.newAccountId, _id: {$ne: req.params.id} }).exec(function(err, user) {
       if (err) {
         return workflow.emit('exception', err);
@@ -519,7 +354,7 @@ exports.linkAccount = function(req, res, next){
         return workflow.emit('exception', err);
       }
 
-      user.roles.account = req.body.newAccountId;
+      user.account = req.body.newAccountId;
       user.save(function(err, user) {
         if (err) {
           return workflow.emit('exception', err);

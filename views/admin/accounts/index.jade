@@ -32,12 +32,6 @@ block body
           label Search
           input.form-control(name='search', type='text')
         div.col-sm-3
-          label Status
-          select.form-control(name='status')
-            option(value='') -- any --
-            for status in data.statuses
-              option(value='#{status._id}') #{status.name}
-        div.col-sm-3
           label Sort By
           select.form-control(name='sort')
             option(value='_id') id &#9650;

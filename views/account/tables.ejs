@@ -1,0 +1,51 @@
+<% include header %>
+
+<!-- this page specific styles -->
+<link rel="stylesheet" href="/css/compiled/datatables.css" type="text/css" media="screen" />
+
+<!-- main container -->
+<div class="content">
+
+    <div id="pad-wrapper">
+        <table id="example">
+            <tr>
+                <th>Lat/Lng</th>
+                <th>Timestamp</th>
+                <th>IP</th>
+                <th>Timezone</th>
+                <th>URL</th>
+                <th>URL Ref</th>
+            </tr>
+        <% transactions.forEach(function(transaction){ %>
+            <tr>
+                <td><%= transaction.lat.toFixed(2) %> / <%= transaction.lon.toFixed(2) %></td>
+                <td><%= transaction.timestamp %></td>
+                <td><%= transaction.ip %></td>
+                <td><%= transaction.timezone %></td>
+                <td><%= transaction.url %></td>
+                <td><%= transaction.urlref %></td>
+            </tr>
+        <% }) %>
+        </table>
+    </div>
+</div>
+
+
+<!-- scripts -->
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery-ui-1.10.2.custom.min.js"></script>
+<script src="/js/jquery.dataTables.js"></script>
+<script src="/js/theme.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#example').dataTable({
+            "sPaginationType": "full_numbers"
+        });
+    });
+</script>
+
+
+</body>
+</html>

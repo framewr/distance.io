@@ -2,7 +2,7 @@
 
 exports.init = function(req, res, next){
   var sigma = {};
-  var collections = ['User', 'Account', 'Admin', 'AdminGroup', 'Category', 'Status'];
+  var collections = ['User', 'Account'];
   var queries = [];
 
   collections.forEach(function(el, i, arr) {
@@ -23,6 +23,8 @@ exports.init = function(req, res, next){
       return next(err);
     }
 
+
+    req.app.set('view engine', 'jade');
     res.render('admin/index', sigma);
   };
 
