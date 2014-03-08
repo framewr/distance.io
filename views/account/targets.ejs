@@ -1,0 +1,39 @@
+<% include header %>
+
+<!-- main container -->
+<div class="content">
+    <div id="pad-wrapper">
+        <div class="right">
+            <label for="from">From</label>
+            <input type="text" id="from" name="from">
+            <label for="to">to</label>
+            <input type="text" id="to" name="to">
+        </div>
+        <button id="geo-only" class="btn btn-default">Geo Only</button>
+        <button id="no-filter" class="btn btn-default">No Filter</button>
+        <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+        <div id="map-canvas" style="width:100%; height: 450px; margin-bottom: 15px;"></div>
+        <table id="example">
+        <thead>
+            <tr>
+                <th>Lat/Lng</th>
+                <th>User</th>
+            </tr>
+        </thead>
+        <% transactions.forEach(function(transaction){ %>
+            <tr>
+                <td><%= transaction.target.coordinates[1].toFixed(2) %> / <%= transaction.target.coordinates[0].toFixed(2) %></td>
+                <td><a href="/account/targets/?user=<%= transaction.user %>"><%= transaction.user %></a></td>
+            </tr>
+        <% }) %>
+        </table>
+    </div>
+</div>
+
+<% include footer %>
+
+<!-- scripts -->
+<script type="text/javascript">
+    var TRANSACTIONS = <%- JSON.stringify(transactions) %>;
+</script>
+<script src="/js/distance_targets.js"></script>

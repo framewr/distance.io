@@ -1,0 +1,221 @@
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+[0;36mMongoose:[0m transactions.ensureIndex({ account: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ user: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ email: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ [32m'status.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ search: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ email: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ timeCreated: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ resetPasswordToken: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'twitter.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'github.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'facebook.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ search: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+[0;36mMongoose:[0m transactions.ensureIndex({ account: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ user: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ email: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ [32m'status.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ search: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ email: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ timeCreated: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ resetPasswordToken: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'twitter.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'github.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'facebook.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ search: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+[0;36mMongoose:[0m transactions.ensureIndex({ account: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ user: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ email: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ [32m'status.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ search: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ email: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ timeCreated: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ resetPasswordToken: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'twitter.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'github.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'facebook.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ search: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+[0;36mMongoose:[0m transactions.ensureIndex({ account: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ user: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ email: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ [32m'status.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ search: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ email: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ timeCreated: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ resetPasswordToken: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'twitter.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'github.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'facebook.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ search: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+[0;36mMongoose:[0m transactions.ensureIndex({ account: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ user: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ email: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ [32m'status.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ search: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ email: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ timeCreated: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ resetPasswordToken: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'twitter.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'github.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'facebook.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ search: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+[0;36mMongoose:[0m transactions.ensureIndex({ account: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ user: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ email: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ [32m'status.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ search: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ email: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ timeCreated: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ resetPasswordToken: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'twitter.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'github.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'facebook.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ search: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+[0;36mMongoose:[0m transactions.ensureIndex({ account: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ user: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ email: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ [32m'status.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ search: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ email: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ timeCreated: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ resetPasswordToken: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'twitter.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'github.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'facebook.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ search: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+[0;36mMongoose:[0m transactions.ensureIndex({ account: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ user: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ email: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ [32m'status.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ search: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ email: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ timeCreated: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ resetPasswordToken: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'twitter.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'github.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'facebook.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ search: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+[0;36mMongoose:[0m transactions.ensureIndex({ account: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ user: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ email: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ [32m'status.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ search: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ email: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ timeCreated: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ resetPasswordToken: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'twitter.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'github.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'facebook.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ search: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+[0;36mMongoose:[0m transactions.ensureIndex({ account: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ user: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ email: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ [32m'status.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ search: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ email: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ timeCreated: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ resetPasswordToken: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'twitter.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'github.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'facebook.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ search: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+[0;36mMongoose:[0m transactions.ensureIndex({ account: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ user: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ email: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ [32m'status.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ search: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ email: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ timeCreated: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ resetPasswordToken: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'twitter.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'github.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'facebook.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ search: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+[0;36mMongoose:[0m transactions.ensureIndex({ account: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ user: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ email: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ [32m'status.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ search: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ email: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ timeCreated: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ resetPasswordToken: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'twitter.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'github.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'facebook.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ search: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+[0;36mMongoose:[0m transactions.ensureIndex({ account: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ user: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ email: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ [32m'status.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m accounts.ensureIndex({ search: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ email: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m, unique: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ timeCreated: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ resetPasswordToken: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'twitter.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'github.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ [32m'facebook.id'[39m: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ search: [33m1[39m }) { safe: [90mundefined[39m, background: [33mtrue[39m }  

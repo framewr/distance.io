@@ -1,5 +1,6 @@
 'use strict';
 //dependencies
+require('newrelic');
 var config = require('./config'),
     express = require('express'),
     mongoStore = require('connect-mongo')(express),

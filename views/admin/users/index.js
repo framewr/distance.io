@@ -72,11 +72,6 @@ exports.create = function(req, res, next){
       return workflow.emit('response');
     }
 
-    if (!/^[a-zA-Z0-9\-\_]+$/.test(req.body.username)) {
-      workflow.outcome.errors.push('only use letters, numbers, -, _');
-      return workflow.emit('response');
-    }
-
     workflow.emit('duplicateUsernameCheck');
   });
 
@@ -125,9 +120,6 @@ exports.update = function(req, res, next){
 
     if (!req.body.username) {
       workflow.outcome.errfor.username = 'required';
-    }
-    else if (!/^[a-zA-Z0-9\-\_]+$/.test(req.body.username)) {
-      workflow.outcome.errfor.username = 'only use letters, numbers, \'-\', \'_\'';
     }
 
     if (!req.body.email) {
@@ -323,8 +315,8 @@ exports.linkAccount = function(req, res, next){
       }
 
       if (account.user.id && String(account.user.id) !== String(req.params.id)) {
-        workflow.outcome.errors.push('Account is already linked to a different user.');
-        return workflow.emit('response');
+        //workflow.outcome.errors.push('Account is already linked to a different user.');
+        //return workflow.emit('response');
       }
 
       workflow.account = account;
@@ -457,7 +449,7 @@ exports.delete = function(req, res, next){
   var workflow = req.app.utility.workflow(req, res);
 
   workflow.on('validate', function() {
-    if (!req.user.roles.admin.isMemberOf('root')) {
+    if (!req.user.isAdmin) {
       workflow.outcome.errors.push('You may not delete users.');
       return workflow.emit('response');
     }

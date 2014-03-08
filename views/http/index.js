@@ -6,6 +6,7 @@ exports.http404 = function(req, res){
     res.send({ error: 'Resource not found.' });
   }
   else {
+    req.app.set('view engine', 'jade');
     res.render('http/404');
   }
 };
@@ -17,6 +18,7 @@ exports.http500 = function(err, req, res, next){
   }
   else {
     console.log(err.stack);
+    req.app.set('view engine', 'jade');
     res.render('http/500');
   }
 };

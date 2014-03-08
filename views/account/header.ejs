@@ -20,7 +20,9 @@
     <link rel="stylesheet" type="text/css" href="/css/compiled/icons.css" />
 
     <!-- this page specific styles -->
+    <link rel="stylesheet" href="/css/compiled/datatables.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="/css/compiled/index.css" type="text/css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/css/distance.css" />
 
     <!-- open sans font -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css' />
@@ -75,18 +77,32 @@
                     <span>Users</span>
                 </a>
             </li>
-            <li <% if (menu === 'tables') { %> class="active" <%}%>>
-                <a href="/account/tables/">
-                    <i class="icon-th-large"></i>
-                    <span>Logs</span>
+            <li <% if (menu === 'targets') { %> class="active" <%}%>>
+                <a href="/account/targets/">
+                    <i class="icon-location-arrow"></i>
+                    <span>Targets</span>
                 </a>
             </li>
+            <li <% if (menu === 'heatmap') { %> class="active" <%}%>>
+                <a href="/account/heatmap/">
+                    <i class="icon-sun"></i>
+                    <span>Heatmap</span>
+                </a>
+            </li>
+            <li <% if (menu === 'setup') { %> class="active" <%}%>>
+                <a href="/account/setup/">
+                    <i class="icon-th-large"></i>
+                    <span>Setup</span>
+                </a>
+            </li>
+            <% if (user.isAdmin) {%>
             <li>
                 <a href="/admin/">
                     <i class="icon-cog"></i>
                     <span>Admin</span>
                 </a>
             </li>
+            <% } %>
         </ul>
     </div>
     <!-- end sidebar -->

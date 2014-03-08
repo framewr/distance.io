@@ -1,0 +1,58 @@
+<% include header %>
+
+<!-- main container -->
+<div class="content">
+    <div id="pad-wrapper">
+        <div class="right">
+            <label for="from">From</label>
+            <input type="text" id="from" name="from">
+            <label for="to">to</label>
+            <input type="text" id="to" name="to">
+        </div>
+        <button id="geo-only" class="btn btn-default">Geo Only</button>
+        <button id="no-filter" class="btn btn-default">No Filter</button>
+        <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+       <div id="panel">
+          <button onclick="changeGradient()">Change gradient</button>
+          <button onclick="changeRadius()">Change radius</button>
+          <button onclick="changeOpacity()">Change opacity</button>
+        </div>
+        <div id="map-canvas" style="width:100%; height: 450px; margin-bottom: 15px;"></div>
+        <table id="example">
+        <thead>
+            <tr>
+                <th>Lat/Lng</th>
+                <th>Timestamp</th>
+                <th>IP</th>
+                <th>User</th>
+                <th>URL</th>
+                <th>URL Ref</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <% transactions.forEach(function(transaction){ %>
+            <tr>
+                <td><%= transaction.lat.toFixed(2) %> / <%= transaction.lon.toFixed(2) %></td>
+                <td><%= transaction.timestamp %></td>
+                <td><a href="/account/?ip=<%= transaction.ip %>"><%= transaction.ip %></a></td>
+                <td><a href="/account/?user=<%= transaction.user %>"><%= transaction.user %></a></td>
+                <td><%= transaction.url %></td>
+                <td>
+                    <% if (transaction.urlref) { %>
+                    <%= transaction.urlref.split('?')[0] %>
+                    <% } %>
+                </td>
+                <td><%= transaction.locationType %></td>
+            </tr>
+        <% }) %>
+        </table>
+    </div>
+</div>
+
+<% include footer %>
+
+<!-- scripts -->
+<script type="text/javascript">
+    var TRANSACTIONS = <%- JSON.stringify(transactions) %>;
+</script>
+<script src="/js/distance_heatmap.js"></script>

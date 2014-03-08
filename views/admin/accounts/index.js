@@ -410,7 +410,7 @@ exports.delete = function(req, res, next){
   var workflow = req.app.utility.workflow(req, res);
 
   workflow.on('validate', function() {
-    if (!req.user.roles.admin.isMemberOf('root')) {
+    if (!req.user.isAdmin) {
       workflow.outcome.errors.push('You may not delete accounts.');
       return workflow.emit('response');
     }

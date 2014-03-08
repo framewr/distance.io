@@ -30,7 +30,7 @@ function ensureAccount(req, res, next) {
 exports = module.exports = function(app, passport) {
 
   //api
-  app.get('/api', require('./views/api/index').init);
+  app.get('/api', require('./views/api/api').init);
 
   //front end
   app.get('/', require('./views/index').init);
@@ -102,8 +102,10 @@ exports = module.exports = function(app, passport) {
   app.all('/account*', ensureAuthenticated);
   app.all('/account*', ensureAccount);
   app.get('/account/', require('./views/account/users').init);
+  app.get('/account/heatmap/', require('./views/account/heatmap').init);
   app.get('/account/users/', require('./views/account/users').init);
-  app.get('/account/tables/', require('./views/account/tables').init);
+  app.get('/account/targets/', require('./views/account/targets').init);
+  app.get('/account/setup/', require('./views/account/setup').init);
 
   //account > verification
   app.get('/account/verification/', require('./views/account/verification/index').init);

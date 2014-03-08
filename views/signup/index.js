@@ -22,9 +22,6 @@ exports.signup = function(req, res){
     if (!req.body.username) {
       workflow.outcome.errfor.username = 'required';
     }
-    else if (!/^[a-zA-Z0-9\-\_]+$/.test(req.body.username)) {
-      workflow.outcome.errfor.username = 'only use letters, numbers, \'-\', \'_\'';
-    }
 
     if (!req.body.email) {
       workflow.outcome.errfor.email = 'required';
@@ -114,7 +111,7 @@ exports.signup = function(req, res){
       }
 
       //update user with account
-      workflow.user.roles.account = account._id;
+      workflow.user.account = account._id;
       workflow.user.save(function(err, user) {
         if (err) {
           return workflow.emit('exception', err);
